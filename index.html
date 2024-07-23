@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Driver</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Let's Book Your Ride</h1>
+        <form>
+            <!-- Start Ride Section -->
+            <h2>Start Ride</h2>
+            <label for="start-location">Starting Location:</label>
+            <select id="start-location" name="start-location">
+                <option value="">--Select Location Type--</option>
+                <option value="residential">Residential Area</option>
+                <option value="hotel">Hotel</option>
+                <option value="business">Business</option>
+                <option value="airport">Airport</option>
+            </select>
+            <div id="residential-details" class="hidden">
+                <label for="residential-street">Street:</label>
+                <input type="text" id="residential-street" name="residential-street">
+                <label for="residential-zip">Zip Code:</label>
+                <input type="text" id="residential-zip" name="residential-zip">
+                <label for="residential-city">City:</label>
+                <input type="text" id="residential-city" name="residential-city">
+                <label for="residential-state">State:</label>
+                <input type="text" id="residential-state" name="residential-state">
+            </div>
+            <div id="hotel-details" class="hidden">
+                <label for="hotel-street">Street:</label>
+                <input type="text" id="hotel-street" name="hotel-street">
+                <label for="hotel-zip">Zip Code:</label>
+                <input type="text" id="hotel-zip" name="hotel-zip">
+                <label for="hotel-city">City:</label>
+                <input type="text" id="hotel-city" name="hotel-city">
+                <label for="hotel-state">State:</label>
+                <input type="text" id="hotel-state" name="hotel-state">
+                <label for="hotel-location-type">Location in Hotel:</label>
+                <select id="hotel-location-type" name="hotel-location-type">
+                    <option value="">--Select Location Type--</option>
+                    <option value="room">Room</option>
+                    <option value="common">Common Area</option>
+                </select>
+                <div id="hotel-room" class="hidden">
+                    <label for="hotel-room-number">Room Number:</label>
+                    <input type="text" id="hotel-room-number" name="hotel-room-number">
+                </div>
+                <div id="hotel-location-details" class="hidden">
+                    <label for="hotel-location-description">Specify Location:</label>
+                    <input type="text" id="hotel-location-description" name="hotel-location-description">
+                </div>
+            </div>
+            <div id="business-details" class="hidden">
+                <label for="business-street">Street:</label>
+                <input type="text" id="business-street" name="business-street">
+                <label for="business-zip">Zip Code:</label>
+                <input type="text" id="business-zip" name="business-zip">
+                <label for="business-city">City:</label>
+                <input type="text" id="business-city" name="business-city">
+                <label for="business-state">State:</label>
+                <input type="text" id="business-state" name="business-state">
+            </div>
+            <div id="airport-details" class="hidden">
+                <label for="airport">Select Airport:</label>
+                <select id="airport" name="airport">
+                    <option value="">--Select Airport--</option>
+                    <option value="miami">Miami</option>
+                    <option value="west-palm-beach">West Palm Beach</option>
+                    <option value="tampa">Tampa</option>
+                    <option value="fort-lauderdale">Fort Lauderdale</option>
+                </select>
+                <label for="terminal" class="hidden">Terminal:</label>
+                <input type="text" id="terminal" name="terminal" placeholder="Enter terminal if applicable" class="hidden">
+            </div>
+
+            <!-- End Ride Section -->
+            <h2>End Ride</h2>
+            <label for="end-location">Ending Location:</label>
+            <select id="end-location" name="end-location">
+                <option value="">--Select Location Type--</option>
+                <option value="house">House</option>
+                <option value="hotel">Hotel</option>
+                <option value="specific-location">Specific Location</option>
+                <option value="airport">Airport</option>
+            </select>
+            <div id="house-end-details" class="hidden">
+                <label for="house-end-street">Street:</label>
+                <input type="text" id="house-end-street" name="house-end-street">
+                <label for="house-end-zip">Zip Code:</label>
+                <input type="text" id="house-end-zip" name="house-end-zip">
+                <label for="house-end-city">City:</label>
+                <input type="text" id="house-end-city" name="house-end-city">
+                <label for="house-end-state">State:</label>
+                <input type="text" id="house-end-state" name="house-end-state">
+            </div>
+            <div id="hotel-end-details" class="hidden">
+                <label for="hotel-end-street">Street:</label>
+                <input type="text" id="hotel-end-street" name="hotel-end-street">
+                <label for="hotel-end-zip">Zip Code:</label>
+                <input type="text" id="hotel-end-zip" name="hotel-end-zip">
+                <label for="hotel-end-city">City:</label>
+                <input type="text" id="hotel-end-city" name="hotel-end-city">
+                <label for="hotel-end-state">State:</label>
+                <input type="text" id="hotel-end-state" name="hotel-end-state">
+                <label for="hotel-end-location-type">Location in Hotel:</label>
+                <select id="hotel-end-location-type" name="hotel-end-location-type">
+                    <option value="">--Select Location Type--</option>
+                    <option value="room">Room</option>
+                    <option value="common">Common Area</option>
+                </select>
+                <div id="hotel-end-room" class="hidden">
+                    <label for="hotel-end-room-number">Room Number:</label>
+                    <input type="text" id="hotel-end-room-number" name="hotel-end-room-number">
+                </div>
+                <div id="hotel-end-location-details" class="hidden">
+                    <label for="hotel-end-location-description">Specify Location:</label>
+                    <input type="text" id="hotel-end-location-description" name="hotel-end-location-description">
+                </div>
+            </div>
+            <div id="specific-location-end-details" class="hidden">
+                <label for="specific-end-street">Street:</label>
+                <input type="text" id="specific-end-street" name="specific-end-street">
+                <label for="specific-end-zip">Zip Code:</label>
+                <input type="text" id="specific-end-zip" name="specific-end-zip">
+                <label for="specific-end-city">City:</label>
+                <input type="text" id="specific-end-city" name="specific-end-city">
+                <label for="specific-end-state">State:</label>
+                <input type="text" id="specific-end-state" name="specific-end-state">
+            </div>
+            <div id="end-airport-details" class="hidden">
+                <label for="end-airport">Select Airport:</label>
+                <select id="end-airport" name="end-airport">
+                    <option value="">--Select Airport--</option>
+                    <option value="miami">Miami</option>
+                    <option value="west-palm-beach">West Palm Beach</option>
+                    <option value="tampa">Tampa</option>
+                    <option value="fort-lauderdale">Fort Lauderdale</option>
+                </select>
+                <label for="end-terminal" class="hidden">Terminal:</label>
+                <input type="text" id="end-terminal-details" name="end-terminal-details" placeholder="Enter terminal if applicable" class="hidden">
+            </div>
+            
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
