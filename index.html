@@ -147,6 +147,21 @@
             <button type="submit">Book Now</button>
         </form>
     </div>
+
+    <div id="container">
+        <div id="map"></div>
+        <div id="sidebar">
+          <h3 style="flex-grow: 0">Request</h3>
+          <pre style="flex-grow: 1" id="request"></pre>
+          <h3 style="flex-grow: 0">Response</h3>
+          <pre style="flex-grow: 1" id="response"></pre>
+        </div>
+      </div>
+     <script
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDflJ5ls9ceKycSIqjuYj4OA69QipY-CTo&callback=initMap&v=weekly&solution_channel=GMP_CCS_distancematrix_v2"
+     defer
+   ></script>
     <script src="script.js"></script>
+    <script src="map.js"></script>
 </body>
 </html>
